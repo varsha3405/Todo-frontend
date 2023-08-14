@@ -1,0 +1,21 @@
+<div>  
+    <div class="todo__header"><h1>Todo App</h1></div>
+    <div>
+        <div *ngFor="let todo of todos;index as ind">
+            <div class="todo__container">
+                <h3>{{todo}}</h3>
+                <button (click)="handleRemoveTodo(ind)" class="todo__remove_btn"><mat-icon>delete</mat-icon></button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="input__container" [@slideInOut]="inputVisible ? 'in' : 'out'">
+            <mat-form-field appearance="outline" class="input"  *ngIf="inputVisible" focus>
+                <input matInput type="text" placeholder="Enter todo" (keydown.enter)="handleOnAddTodo()" [(ngModel)]="current_todo" />
+            </mat-form-field>
+        </div>
+        <button class="input__add_btn" mat-fab [color]="inputVisible ? 'warn' : 'primary'" (click)="toggleInputVisibility()">
+            <mat-icon>{{ inputVisible ? 'close' : 'add' }}</mat-icon>
+        </button>
+    </div>
+</div>

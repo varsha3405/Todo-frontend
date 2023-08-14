@@ -1,0 +1,61 @@
+.todo__header {
+  background-color: #303f9f; /* Use your desired background color */
+  color: #fff; /* Text color */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.todo__header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+.todo__remove_btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+/* Button hover and click effect */
+.todo__remove_btn:hover,
+.todo__remove_btn:focus,
+.todo__remove_btn:active {
+  transform: scale(1.1); /* Increase size on hover/focus/active */
+  color: #8d3939; /* Change color on hover/focus/active */
+}
+.todo__header p {
+  font-size: 16px;
+  margin: 8px 0 0;
+}
+.todo__remove_btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: red;
+}
+
+.todo__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: auto;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.input__container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  bottom: 10px;
+  right: 100px;
+  transition: transform 0.4s ease-in-out;
+}
+input {
+  width: 80%;
+}
+.input__add_btn {
+  position: absolute;
+  bottom: 34px;
+  right: 10px;
+}
